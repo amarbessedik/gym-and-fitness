@@ -30,6 +30,7 @@
   position: fixed;
   width: 100%;
   z-index: 999;
+  box-shadow: 0 0 10px 4px #222
 }
 
 #navbar__logo {
@@ -219,3 +220,72 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Membership section */
+.memberships{
+    background: var(--black);
+    color: var(--white);
+    padding: 6rem calc((100vw - 1100px) / 2);
+    text-align: center;
+}
+.memberships h1{
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+    padding: 0 1rem;
+    font-weight: 300;
+}
+.memberships__desc{
+    margin-bottom: 3rem;
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    padding: 1rem;
+}
+.membership__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+}
+.membership__card{
+    padding: 2rem;
+    min-height: 450px;
+    width: 325px;
+    background: var(--white);
+    color: var(--black);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.membership__perks{
+    min-height: 150px;
+}
+.membership__perks p{
+    font-weight: 400
+}
+.membership__card p{
+    margin-bottom: 1rem;
+}
+.card-icon{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--red);
+}
+.membership__title h3{
+    font-size: clamp(1rem, 5vw, 2rem);
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1100px){
+    .membership__wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .membership__card{
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Team section */
