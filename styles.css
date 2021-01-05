@@ -19,6 +19,7 @@
 
 .navbar {
   background: var(--black);
+  /* background: #2fc989; */
   height: 80px;
   padding: 0.5rem calc((100vw - 1200px) / 2);
   display: flex;
@@ -137,9 +138,10 @@
 }
 
 .hero__content h1 {
-  font-size: clamp(3rem, 8vw, 7rem);
+  font-size: clamp(3rem, 10vw, 6rem);
   margin-bottom: 2.5rem;
   font-weight: 400;
+  text-align: center;
 }
 .hero__content h1 span {
   display: inline-block;
@@ -393,4 +395,86 @@
   }
 }
 
-/* Form section */
+/* Email section */
+.email {
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.6) 35%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    url("./images/gym-3.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  width: 100%;
+  padding: 5rem calc((100vw - 1300px) / 2);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.email__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.email__content h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-size: clamp(1rem, 5vw, 3rem);
+  font-weight: 200;
+}
+.email__content p {
+  text-align: center;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+  font-weight: 200;
+}
+form {
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form__wrapper input {
+  padding: 1rem 2rem;
+  width: 35vw;
+  line-height: 1.5;
+}
+.form__wrapper input:focus {
+  outline: 1px solid var(--red);
+  border: 1px solid var(--red);
+}
+.form__wrapper input::placeholder {
+  color: var(--red);
+}
+#btn-submit {
+  border-radius: unset;
+}
+@media screen and (max-width: 768px) {
+  .form__wrapper form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+  .form__wrapper input {
+    width: 75vw;
+  }
+  #btn-submit{
+    margin-top: 1rem;
+    padding: .75rem 2.2rem;
+    /* border-radius: 4px; */
+    width: 75vw;
+}
+}
+@media screen and (max-width: 500px){
+      .form__wrapper input {
+    width: 90vw;
+  }
+  #btn-submit{
+    width: 90vw;
+}
+}
